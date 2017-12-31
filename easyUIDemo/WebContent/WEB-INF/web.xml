@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>easyUIDemo</display-name>
+  <!-- 显示全部数据 -->
+  <servlet>
+  	<servlet-name>allData</servlet-name>
+  	<servlet-class>easyUIDemo.datagrid.AllDataServlet</servlet-class>
+  </servlet>
+   <servlet-mapping>
+  	<servlet-name>allData</servlet-name>
+  	<url-pattern>/GetAllData</url-pattern>
+  </servlet-mapping>
+</web-app>

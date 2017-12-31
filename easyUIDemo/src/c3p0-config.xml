@@ -1,0 +1,12 @@
+<c3p0-config>
+	<default-config>
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/exam?useUnicode=true&amp;characterEncoding=UTF8</property>		
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="user">root</property>
+		<property name="password">182211</property>
+		<property name="initialPoolSize">1</property>
+		<property name="maxPoolSize">600</property>
+		<property name="maxIdleTime">60</property>
+		<property name="idleConnectionTestPeriod">600</property>
+	</default-config>
+</c3p0-config>
