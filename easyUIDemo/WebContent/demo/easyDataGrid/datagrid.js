@@ -2,7 +2,7 @@
  * Created by Jquery on 2017/12/30.
  */
 /**
- * 测试daTagrid中loadData的使用
+ * 使用daTagrid中loadData方法加载数据
  */
 $(function () {
     var total=0;
@@ -35,7 +35,14 @@ $(function () {
     //获取数据
     getData(queryParams,function(data){
         resultData=data;
-        //加载数据
+        /*
+         * 加载数据
+         * loadData方法加载的数据格式：
+         * loadData是加载本地的json格式字符串，具体使用请看如下：
+         *var jsoin = { "total": 28, "rows": [
+         *{ "productid": "FI-SW-01", "unitcost": 10.00, "status": "P", "listprice": 36.50, "attr1": "Large", "itemid": "EST-1" }]};
+         *jQuery("#tt").datagrid("loadData",jsoin);----这里是加载json格式的字符串，
+         */
         $("#dataToSync").datagrid("loadData",resultData);
         //获取分页对象并初始化
         var getPager=$("#dataToSync").datagrid("getPager");
@@ -45,7 +52,6 @@ $(function () {
 
     });
     function onSelectPageFunc(pageNumber,pageSize){
-        debugger;
         //分页改变时请求新的数据并加载
         //console.log(pageNumber+":"+pageSize);
         param.pageSize=pageSize;
